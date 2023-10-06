@@ -25,17 +25,17 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   ];
 
   var options = [
-    r'a',
-    r'b',
-    r'c',
-    r'd',
+    r'\( a \)',
+    r'\( b \)',
+    r'\( c \)',
+    r'\( d \)',
   ];
 
   var resistance = [
-    r'R1 = R2 = R3',
-    r'R1 > R2 > R3',
-    r'R1 < R2 < R3',
-    r'R1 = R2 < R3',
+    r' \( R1 = R2 = R3 \)',
+    r' \( R1 > R2 > R3 \)',
+    r' \( R1 < R2 < R3 \)',
+    r' \( R1 = R2 < R3 \)',
   ];
 
   var quadratic = [
@@ -56,21 +56,21 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         child: TeXView(
           child: TeXViewColumn(
             children: [
-              const TeXViewDocument(r'Calculate the current flows through the 10 \( \Omega \) resistor in the following circuit:'),
+              const TeXViewDocument(r'Calculate the current flows through the \( \textbf{ 10 \( \Omega \) } \) resistor in the following circuit:'),
               for (var i = 0; i < q1list.length; i++)
                 TeXViewInkWell(
                   style: const TeXViewStyle.fromCSS('padding: 5px; border: none;'),
                   id: 'id_0',
                   child: TeXViewDocument(r'\( ' + q1list[i] + r' \)'),
                 ),
-              const TeXViewDocument(r'Methyl orange is an indicator'),
+              const TeXViewDocument(r'\( \textbf{Methyl orange} \) is an indicator'),
               const TeXViewDocument(
                 r"Newton's second law deals with the inertia of an object",
                 style: TeXViewStyle.fromCSS('margin-bottom: 20px;'),
               ),
               const TeXViewDocument(r'Prove that: $$\sqrt{ \frac{ \sec(P+1) }{ \sec(P-1) } } = \cosec P + cot P $$'),
               const TeXViewDocument(
-                r'Plasmolysis in a plant cell is defined as breakdown (lysis) of plasma membrane in hypotonic medium',
+                r'\( \textbf{Plasmolysis} \) in a plant cell is defined as breakdown (lysis) of plasma membrane in hypotonic medium',
                 style: TeXViewStyle.fromCSS('margin-bottom: 10px; margin-top: 10px'),
               ),
               const TeXViewDocument(
@@ -78,7 +78,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 style: TeXViewStyle.fromCSS('margin-bottom: 10px; margin-top: 10px'),
               ),
               const TeXViewDocument(
-                r'<p>Three friends Om, Jay and Jagdish are going around a circular ground. Om takes 12 minutes to complete one round of the ground, while Jay takes 18 minutes and Jagdish takes 25 minutes for the same. If they all start at the same point and at the same time and go in the same direction, after what time will they meet again at the starting point.</p>',
+                r'<p>Three friends Om, Jay and Jagdish are going around a circular ground. Om takes \( \textit{12 minutes} \) to complete one round of the ground, while Jay takes \( \textit{18 minutes} \) and Jagdish takes \( \textit{25 minutes} \) for the same. If they all start at the same point and at the same time and go in the same direction, after what time will they meet again at the starting point.</p>',
                 style: TeXViewStyle.fromCSS('margin-bottom: 10px; margin-top: 10px'),
               ),
               const TeXViewDocument(
@@ -107,7 +107,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 r'The physicist Neils Bohr proposed a model for the atom in which the electrons orbit the nucleus in fixed orbits',
                 style: TeXViewStyle.fromCSS('margin-bottom: 10px; margin-top: 10px'),  
               ),
-              const TeXViewDocument(r'A student carries out an experiment and plots the V-I graph of three samples of nichrome wire with resistances R1 R2 and R3 respectively. Which of the following is hue?'),
+              const TeXViewDocument(r'A student carries out an experiment and plots the \( \textit{V-I} \) graph of three samples of nichrome wire with resistances \( R_1 \) \( R_2 \) and \( R_3 \) respectively. Which of the following is hue?'),
               for ( var i = 0; i < resistance.length; i++)
                 TeXViewInkWell(
                   style: const TeXViewStyle.fromCSS('padding: 5px; border: none;'),
@@ -115,7 +115,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   child: TeXViewDocument(r'(' + options[i] + r') ' + resistance[i]),
                 ),
               const TeXViewDocument(
-                r'<p>Ammonia is found in many household products, such as window cleaners. It turns red litmus blue. What is its nature?</p>',
+                r'<p>\( \textbf{Ammonia}\) is found in many household products, such as window cleaners. It turns \( \underline{red} \) litmus \( \underline{blue} \). What is its nature?</p>',
                 style: TeXViewStyle.fromCSS('margin-bottom: 10px; margin-top: 10px'),  
               ),
               // inline latex math experession
